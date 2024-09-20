@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me Salva - Alternativa Correta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Socorro!</h1>
+        <form method="post">
+            <label for="link">Insira o link do Me Salva:</label>
+            <input type="text" id="link" name="link" required>
+            <button type="submit">Obter Alternativa Correta</button>
+        </form>
+        {% if alternativa_correta %}
+            <p>A alternativa correta é: {{ alternativa_correta }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
