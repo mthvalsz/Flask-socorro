@@ -35,7 +35,7 @@ def index():
         link_usuario = request.form['link']
         codigo_questao = extrair_codigo(link_usuario)
         if codigo_questao:
-            url = f"https://www.mesalva.com/app/_next/data/eotWR84n2AGZWHLCKUcH5/exercicio/{codigo_questao}.json"
+            url = f"https://www.mesalva.com/app/_next/data/bm2l3_QV91OobhF5hOUQF/exercicio/{codigo_questao}.json"
             alternativa_correta = obter_alternativa_correta(url)
     
     return render_template('index.html', alternativa_correta=alternativa_correta)
